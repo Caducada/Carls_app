@@ -1,0 +1,258 @@
+body{
+    background: url("earth.jpeg");
+    background-size: cover;
+    height: 120%;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 40px;
+    font-size: 500%;
+    margin-bottom: 25px;
+    font-family: "Didact Gothic", sans-serif;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 200%;
+    overflow: hidden;
+    font-family: "Didact Gothic", sans-serif;
+    margin-top: 50px;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+.container {
+    width: 37%;
+    height: 80%;
+    background-color: black;
+    margin: auto;
+    overflow: hidden;
+    border-style: solid;
+    border-color:rgb(51, 60, 62) ;
+    border-top-width: 10px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 10px;
+}
+
+.profile_container {
+    width: 37%;
+    height: 70%;
+    background-color: black;
+    margin: auto;
+    overflow: hidden;
+    border-style: solid;
+    border-color:rgb(51, 60, 62) ;
+    border-top-width: 10px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 10px;
+}
+
+.hub_center{
+    width: 97%;
+    height: 76%;
+    overflow-y: scroll;
+    margin-top:40px;
+    margin: auto;
+}
+
+.profile_center{
+    width: 97%;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 200%;
+    font-family: "Didact Gothic", sans-serif;
+    padding-top: 20px;
+    margin-bottom: 150px;
+}
+
+.hub_center::-webkit-scrollbar {
+    width: 12px;
+}
+
+.hub_center::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+.hub_center::-webkit-scrollbar-thumb:hover {
+    background-color: #333;
+}
+
+.hub_center::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+
+.hub_center {
+    scrollbar-color: #555 #000000;
+}
+
+.person_door{
+    width: 95%;
+    height: 18%;
+    margin-top: 15px;
+    background-color: rgb(223, 145, 1);
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    color: black;
+}
+
+.person_door p {
+    float: right;
+    margin-right: 30px;
+    margin-top: 80px;
+    font-family: "Didact Gothic", sans-serif;
+    font-size: 140%;
+}
+
+.person_door img {
+    height: 70%;
+    width: 15%;
+    margin-top: 25px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+
+.hub_header {
+    height: 10%;
+    overflow: hidden;
+    border-style: solid;
+    border-color:rgb(51, 60, 62) ;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 10px;
+}
+
+.profile_header {
+    display: flex;
+    flex-direction: row;
+    height: 15%;
+    overflow: hidden;
+    border-style: solid;
+    border-color:rgb(51, 60, 62) ;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 10px;
+}
+
+
+.profile_header img {
+    height: 80%;
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 5%;
+}
+
+
+.hub_footer {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    overflow: hidden;
+    border-style: solid;
+    padding-top: 10px;
+    margin-top: 20px;
+    border-style: solid;
+    border-color:rgb(51, 60, 62) ;
+    border-top-width: 10px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+}
+
+.profile_footer {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    overflow: hidden;
+    border-style: solid;
+    padding-top: 10px;
+    margin-top: 20px;
+    border-style: solid;
+    border-color:rgb(51, 60, 62) ;
+    border-top-width: 10px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+}
+
+.profile_footer p {
+    font-family: "Didact Gothic", sans-serif;
+    font-size: 160%;
+    color: #7a4b6e;
+    text-align: center;
+    width: 100%;
+    padding-top: 5px;
+
+
+}
+
+.hub_footer p {
+    font-family: "Didact Gothic", sans-serif;
+    font-size: 140%;
+    color: #7a4b6e;
+    text-align: center;
+    width: 80%;
+
+}
+
+
+.arrow_left {
+    height: 50%;
+    margin-top: 10%;
+    margin-left: 75px;
+}
+
+
+form {
+    height: 100%;
+    width: 100%;
+}
+
+
+.arrow_right {
+    height: 50%;
+    margin-top: 10%;
+    margin-right: 75px;
+}
+
+input[type=text] {
+    width:60%;
+    margin-left: 60px;
+    height: 40px;
+    box-sizing: border-box;
+    margin-top: 4%;
+    float: left;
+    border-radius: 5px;
+  }
+
+input[type=submit]{
+    float: right;
+    margin-top: 28px;
+    margin-right: 60px;
+    font-family: "Didact Gothic", sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: #7a4b6e;
+    width: 120px;
+    height: 45px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: white;
+    border-width: 3px;
+    cursor: pointer;
+}
+
+

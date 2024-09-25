@@ -1,0 +1,40 @@
+<html></html>
+    <head>
+        <title>
+            space-hub
+        </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    </head>
+
+    <body>
+        <a href="{{ url_for('index') }}">
+            <h1>
+                &#129680 space-hub &#129680
+            </h1>
+        </a>
+        <div class="profile_container">
+            <div class="profile_header"> 
+                <img src="{{ url_for('static', filename='astro.png') }}" alt="missing_img">        
+                <h2>
+                    {{ person.name }}
+                </h2>
+            </div>
+            
+            <div class="profile_center">
+                <p> <b> <span style="color: rgb(223, 145, 1);">Personal code: </b> {{ person.personal_code }} </span></p>
+                <p> <b> <span style="color: rgb(223, 145, 1);">Occupation:</span> </b> {{ person.occupation }} </p>
+                <p> <b> <span style="color: rgb(223, 145, 1);">Country: </span></b> {{ person.country }} </p>
+                <p> <b> <span style="color: rgb(223, 145, 1);">City: </span></b> {{ person.city }} </p>
+                <p> <b> <span style="color: rgb(223, 145, 1);">Phone number: </span></b> {{ person.phone_number }} </p>
+                <img src="{{ url_for('static', filename='transaber.png') }}">
+            </div>
+            <div class="profile_footer">
+                <p>©Space Hub Inc</p>
+            </div>
+        </div>
+    </body>
+</html>

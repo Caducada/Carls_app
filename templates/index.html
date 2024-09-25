@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>
+        space-hub
+    </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+
+<body>
+    <a href="{{ url_for('index') }}">
+        <h1>
+            &#129680 space-hub &#129680
+        </h1>
+    <a>
+    <div class="container">
+        <div class="hub_header">
+            <form action="{{ url_for('index') }}" method="POST">
+                <input type="text" id="search" name="search" , placeholder="Search here">
+                <input type="submit" placeholder="search" value="Submit">
+            </form>
+        </div>
+        <div class="hub_center">
+            {% for person in people %}
+            <a href="{{url_for('person_page', ID=person.ID )}}">
+                <div class="person_door">
+                    <img src="{{ url_for('static', filename='astro.png') }}" alt="missing_img">
+                    <p> {{ person.name }} ({{person.country}})</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="hub_footer">
+            {% if current_page == 1 and page_count == 1%}
+                <a href="{{url_for('index', current_page=current_page, old_search = search )}}"><img
+                    src="{{ url_for('static', filename='arrow_left.png') }}" class="arrow_left"></a>
+                <p>{{current_page}}/{{page_count}}</p>
+                <a href="{{url_for('index', current_page=current_page, old_search = search )}}"> <img
+                    src="{{ url_for('static', filename='arrow_right.png') }}" class="arrow_right"></a>
+            {% elif current_page == page_count %}
+                <a href="{{url_for('index', current_page=current_page-1, old_search = search )}}"> <img
+                        src="{{ url_for('static', filename='arrow_left.png') }}" class="arrow_left"></a>
+                <p>{{current_page}}/{{page_count}}</p>
+                <a href="{{url_for('index', current_page=current_page, old_search = search )}}"><img
+                        src="{{ url_for('static', filename='arrow_right.png') }}" class="arrow_right"> </a>
+            {% elif current_page == 1%}
+                <a href="{{url_for('index', current_page=current_page, old_search = search )}}"><img
+                        src="{{ url_for('static', filename='arrow_left.png') }}" class="arrow_left"></a>
+                <p>{{current_page}}/{{page_count}}</p>
+                <a href="{{url_for('index', current_page=current_page+1, old_search = search )}}"> <img
+                        src="{{ url_for('static', filename='arrow_right.png') }}" class="arrow_right"></a>
+            {% else %}
+                <a href="{{url_for('index', current_page=current_page-1, old_search = search )}}"><img
+                        src="{{ url_for('static', filename='arrow_left.png') }}" class="arrow_left"></a>
+                <p>{{current_page}}/{{page_count}}</p>
+                <a href="{{url_for('index', current_page=current_page+1, old_search = search )}}"> <img
+                        src="{{ url_for('static', filename='arrow_right.png') }}" class="arrow_right"></a>
+            {% endif %}
+        </div>
+    </div>
+    </body>
+
+</html>
